@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Start Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title of Site -->
+	<title>GPT-enabled Services</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.css') }}">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+	<!-- Swiper Bundle CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+	<!-- Mean Menu CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/meanmenu.min.css') }}">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+
+<body>
+	<!-- Preloader Start -->
+	<div class="theme-loader">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+	<!-- Dark Light Start -->
+	<div class="switch__tab">
+		<span class="switch__tab-btn active light-mode-title">Light</span>
+		<span class="mode__switch" onclick="darkLight()"><span></span></span>
+		<span class="switch__tab-btn dark-mode-title">Dark</span>
+	</div>
+	<!-- Dark Light End -->
+	<!-- Header Area Start -->
+	<div class="header__area header__sticky">
+        <div class="container custom__container">
+            <div class="header__area-menubar">
+		<div class="header__area-menubar-center">
+                    <div class="header__area-menubar-center-menu menu-responsive">						
+                        <ul id="mobilemenu">
+                            <li class="menu-item-has-children"><a href="/">Homepage</a>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/translator">Translator</a></li>
+                                    <li><a href="/summarizer">News Summarizer</a></li>
+                                    <li><a href="/callnotesgenerator">Notes Generator</a></li>
+                                    <li><a href="/chatpdf">ChatPDF</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+		</div>
+            </div>
+        </div>
+    </div>    
+	<!-- Header Area End -->	
+	<!-- Services Area Start -->
+	<div class="services__one section-padding pt-0">
+		<div class="container">
+			<div class="row align-items-end mb-70">
+				<div class="col-xl-7 col-lg-8 lg-mb-30">
+					<div class="services__one-title lg-t-center">
+						<span class="subtitle-one">A.W. presents</span>
+						<h2>GPT-enabled Services</h2>
+					</div>
+				</div>
+				<div class="col-xl-5 col-lg-4 t-right lg-t-center">
+					<a class="btn-one" href="/">All Services<i class="far fa-chevron-double-right"></i></a>
+				</div>
+			</div>
+			<div class="row mb-70">
+				<div class="col-xl-3 col-lg-4 col-md-6 xl-mb-30">
+					<div class="services__one-item">
+						<div class="services__one-item-icon">
+							<img src="static/assets/picture/services-1.png" alt="">
+							<div class="services__one-item-icon-one">
+								<img src="static/assets/picture/services-11.png" alt="">
+							</div>
+						</div>
+						<h4><a href="/translator">Translator</a></h4>
+						<p>Translator between English and Simplified Chinese</p>
+						<a class="simple-btn-2" href="/translator">Enter<i class="far fa-chevron-double-right"></i></a>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 md-mb-30">
+					<div class="services__one-item">
+						<div class="services__one-item-icon">
+							<img src="static/assets/picture/services-2.png" alt="">
+							<div class="services__one-item-icon-one">
+								<img src="static/assets/picture/services-22.png" alt="">
+							</div>
+						</div>
+						<h4><a href="/summarizer">News Summarizer</a></h4>
+						<p>Summarizes daily news in dual languages</p>
+						<a class="simple-btn-2" href="/summarizer">Enter<i class="far fa-chevron-double-right"></i></a>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 md-mb-30">
+					<div class="services__one-item">
+						<div class="services__one-item-icon">
+							<img src="static/assets/picture/services-3.png" alt="">
+							<div class="services__one-item-icon-one">
+								<img src="static/assets/picture/services-33.png" alt="">
+							</div>
+						</div>
+						<h4><a href="/callnotesgenerator">Notes Generator</a></h4>
+						<p>Produces meeting notes from audio recordings</p>
+						<a class="simple-btn-2" href="/callnotesgenerator">Enter<i class="far fa-chevron-double-right"></i></a>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6">
+					<div class="services__one-item">
+						<div class="services__one-item-icon">
+							<img src="static/assets/picture/services-4.png" alt="">
+							<div class="services__one-item-icon-one">
+								<img src="static/assets/picture/services-44.png" alt="">
+							</div>
+						</div>
+						<h4><a href="/chatpdf">ChatPDF</a></h4>
+						<p>Upload a pdf document and start asking questions</p>
+						<a class="simple-btn-2" href="/chatpdf">Enter<i class="far fa-chevron-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-end mb-200">
+				<h3>More functions to come...</h3>
+			</div>
+		</div>
+	</div>
+	<!-- Services Area End -->
+	<!-- Footer Area Start -->
+	<div class="footer__two all-footer">
+		<div class="copyright__two">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<p>A.W. @ 2023</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<!-- Footer Area End -->
+	<!-- Scroll Btn Start -->
+	<div class="scroll-up scroll-two">
+		<svg class="scroll-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path> </svg>
+	</div>
+	<!-- Scroll Btn End -->
+	<!-- Main JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery-3.6.0.min.js') }}"></script>
+	<!-- Bootstrap JS -->
+	<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+	<!-- Counter Up JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.counterup.min.js') }}"></script>
+	<!-- Popper JS -->
+	<script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+	<!-- Progressbar JS -->
+	<script src="{{ url_for('static', filename='assets/js/progressbar.min.js') }}"></script>
+	<!-- Magnific Popup JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+	<!-- Swiper Bundle JS -->
+	<script src="{{ url_for('static', filename='assets/js/swiper-bundle.min.js') }}"></script>
+    <!-- Isotope JS -->
+	<script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+	<!-- Waypoints JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.waypoints.min.js') }}"></script>
+	<!-- Mean Menu JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.meanmenu.min.js') }}"></script>
+	<!-- Custom JS -->
+	<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+</body>
+</html>

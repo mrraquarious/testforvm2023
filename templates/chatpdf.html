@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Start Meta -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title of Site -->
+	<title>GPT-enabled Services</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+	<!-- Font Awesome CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.css') }}">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+	<!-- Swiper Bundle CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+	<!-- Mean Menu CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/meanmenu.min.css') }}">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+<body>
+	<!-- Preloader Start -->
+	<div class="theme-loader">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+	<!-- Dark Light Start -->
+	<div class="switch__tab">
+		<span class="switch__tab-btn active light-mode-title">Light</span>
+		<span class="mode__switch" onclick="darkLight()"><span></span></span>
+		<span class="switch__tab-btn dark-mode-title">Dark</span>
+	</div>
+	<!-- Dark Light End -->
+	<!-- Header Area Start -->
+	<div class="header__area header__sticky">
+        <div class="container custom__container">
+            <div class="header__area-menubar">
+				<div class="header__area-menubar-center">
+                    <div class="header__area-menubar-center-menu menu-responsive">						
+                        <ul id="mobilemenu">
+							<li class="menu-item-has-children"><a href="/">Homepage</a>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/translator">Translator</a></li>
+                                    <li><a href="/summarizer">News Summarizer</a></li>
+                                    <li><a href="/callnotesgenerator">Notes Generator</a></li>
+                                    <li><a href="/chatpdf">ChatPDF</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+            </div>
+        </div>
+    </div>    
+	<!-- Header Area End -->
+    <!-- Contact Area Start -->
+    <div class="contact__two section-padding pt-0">
+		<div class="container">
+			<div class="row align-items-end mb-30">
+				<div class="col-xl-7 col-lg-8">
+					<div class="services__one-title lg-t-center mb-10">
+						<span class="subtitle-one">A.W. presents</span>
+						<h2>ChatPDF (beta)</h2>
+					</div>
+				</div>
+				<div class="col-xl-5 col-lg-4 t-right lg-t-center mb-10">
+					<a class="btn-one" href="/">Return Home<i class="far fa-chevron-double-right"></i></a>
+				</div>
+			</div>
+            <div class="row contact__two-box mb-200">
+                <div class="col-xl-4 col-lg-5">
+                    <div class="contact__two-left">
+                        <h3>Document</h3>
+						<p class="mb-30">Upload a file (currently accpect PDF, Word, PPT and text files) </p> 
+                    </div>
+					<div class="contact__two-left mb-10">
+						<form id="uploadForm" enctype="multipart/form-data" class="mb-20">
+							<input type="file" id="document-file" accept=".pdf, .docx, .txt, .pptx" class="mb-20">
+							<button class="btn-one" type="submit">&nbsp&nbspUpload Document&nbsp&nbsp<i class="far fa-chevron-double-right"></i></button>
+						</form>
+					</div>
+					<div class="contact__two-left mb-10">
+						<p class="mb-20" id="upload-success-msg" style="display: none;">Upload successful! You can chat with GPT about this document now</p>
+					</div>                  
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    <div class="contact__two-right">
+                        <h3>Chat with GPT</h3> 
+						<p>Type your questions and press Ask</p>                       
+                        <div class="contact__two-right-form">
+                            <form action="javascript:;">
+                                <div class="row">
+									<div class="col-lg-12">
+                                        <div class="contact__two-right-form-item">
+                                            <textarea id="chat" readonly></textarea>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12"> 
+										<div class="contact__two-right-form-item">
+											<input class="col-lg-12 md-20" id="question" placeholder="Enter your question here">
+										</div>
+									</div>
+								</div>
+								</div class="row">
+									<div class="col-lg-12 mb-30"></div>
+										<div class="contact__two-right-form-item">
+											<button class="btn-one" id="askBtn">Ask<i class="far fa-chevron-double-right"></i></button>
+										</div>
+									</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>        
+    <!-- Contact Area End -->
+	<!-- Footer Area Start -->
+	<div class="footer__two">
+		<div class="copyright__two mb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="copyright__two">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<p>A.W. @ 2023</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<!-- Footer Area End -->
+	<!-- Scroll Btn Start -->
+	<div class="scroll-up scroll-two">
+		<svg class="scroll-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path> </svg>
+	</div>
+	<!-- Scroll Btn End -->
+	<!-- Main JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery-3.6.0.min.js') }}"></script>
+	<!-- Bootstrap JS -->
+	<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+	<!-- Counter Up JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.counterup.min.js') }}"></script>
+	<!-- Popper JS -->
+	<script src="{{ url_for('static', filename='assets/js/popper.min.js') }}"></script>
+	<!-- Progressbar JS -->
+	<script src="{{ url_for('static', filename='assets/js/progressbar.min.js') }}"></script>
+	<!-- Magnific Popup JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+	<!-- Swiper Bundle JS -->
+	<script src="{{ url_for('static', filename='assets/js/swiper-bundle.min.js') }}"></script>
+    <!-- Isotope JS -->
+	<script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+	<!-- Waypoints JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.waypoints.min.js') }}"></script>
+	<!-- Mean Menu JS -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.meanmenu.min.js') }}"></script>
+	<!-- Custom JS -->
+	<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="{{ url_for('static', filename='js/chatpdf.js') }}"></script>
+</body>
+
+</html>
