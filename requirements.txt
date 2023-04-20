@@ -33,3 +33,4 @@ soundfile == 0.12.1
 moviepy
 librosa
 unstructured
+unstructured-inference
